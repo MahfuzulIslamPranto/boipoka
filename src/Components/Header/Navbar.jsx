@@ -24,15 +24,15 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <a className="btn border-[#23BE0A] bg-white text-[#23BE0A]">Home</a>
+                    <a className="btn border-[#23BE0A] px-5 bg-white rounded-xl text-[#23BE0A]">Home</a>
                     {
                         links
                     }
                 </ul>
             </div>
             <div className="navbar-end gap-2">
-                <a className="btn bg-[#23BE0A] text-white">Sign In</a>
-                <a className="btn bg-[#59C6D2] text-white">Sign Up</a>
+                <a className="btn lg:rounded-xl px-5 bg-[#23BE0A] text-white">Sign In</a>
+                <a className="btn lg:rounded-xl px-5 bg-[#59C6D2] text-white">Sign Up</a>
             </div>
         </div>
     );
