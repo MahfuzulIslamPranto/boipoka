@@ -4,13 +4,9 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
+import { router } from './Routers/Router.jsx';
 
-const router = createBrowserRouter([
-  {
-    path:'/',
-  element: <div>Hello Boipoka</div>
-  }
-]);
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
