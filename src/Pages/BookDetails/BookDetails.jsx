@@ -15,7 +15,6 @@ const BookDetails = () => {
     console.log(singleBook);
     const handleReadList = (bkId)=>{
         storeInDB(bkId);
-        
     }
     return (
         <div className='flex max-w-6xl mx-auto m-10 gap-20 p-10'>
