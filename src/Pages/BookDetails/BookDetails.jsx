@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import { storeInDB } from '../../utilities/addToDB';
 
 
 const BookDetails = () => {
@@ -12,6 +13,10 @@ const BookDetails = () => {
 
     const { bookName,author, image, review, category, totalPages, rating, publisher, yearOfPublishing, tags } = singleBook;
     console.log(singleBook);
+    const handleReadList = (bkId)=>{
+        storeInDB(bkId);
+        
+    }
     return (
         <div className='flex max-w-6xl mx-auto m-10 gap-20 p-10'>
             <img className='w-5/12' src={image} alt="" />
@@ -31,7 +36,7 @@ const BookDetails = () => {
                 <p className='py-2'><span className='text-gray-500'>Year of Publishing: </span><span className='font-bold'>{yearOfPublishing}</span></p>
                 <p className='py-2'><span className='text-gray-500'>Rating: </span> <span className='font-bold'>{rating}</span></p>
                 <div className='py-2 flex gap-3'>
-                    <button className='border-1 border-gray-400 px-4 py-2 rounded font-bold'>Read</button>
+                    <button onClick={() => handleReadList(bkId)} className='border-1 border-gray-400 px-4 py-2 rounded font-bold'>Read</button>
                     <button className='border-1 border-[#59C6D2] bg-[#59C6D2] px-4 text-white py-2 rounded'>Wishlist</button>
                 </div>
             </div>
